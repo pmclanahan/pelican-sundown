@@ -16,11 +16,9 @@
     {% endif %}
 
     <div class="list-footer">
-      {% if tag %}
-        <a class="feed-link" href="{{ SITEURL }}/{{ TAG_FEED_ATOM|format(tag) }}" title="ATOM Feed for #{{ tag }}"><i class="icon-rss-sign icon-2x"></i></a>
-      {% else %}
+      {% block feed_link %}
         <a class="feed-link" href="{{ SITEURL }}/{{ FEED_ALL_ATOM }}" title="ATOM Feed"><i class="icon-rss-sign icon-2x"></i></a>
-      {% endif %}
+      {% endblock %}
     </div>
   {% endif %}
 {% endblock %}
