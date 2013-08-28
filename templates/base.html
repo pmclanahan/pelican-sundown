@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="{{ SITEURL }}/theme/css/main.css">
     <link rel="stylesheet" href="{{ SITEURL }}/theme/css/pygment.css">
     <link rel="stylesheet" href="{{ SITEURL }}/theme/css/font-awesome.min.css">
+    {% block extra_head %}{% endblock %}
     {% if tag %}
       <link href="{{ SITEURL }}/{{ TAG_FEED_ATOM|format(tag) }}" type="application/atom+xml" rel="alternate" title="{{ SITENAME }} ATOM Feed for #{{ tag }}">
     {% else %}
