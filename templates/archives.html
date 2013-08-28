@@ -1,7 +1,7 @@
 {% extends "base.html" %}
 {% block content %}
 <section id="content" class="body">
-<div class="article-title">Blog Archives</div>
+<div class="page-title">Blog Archives</div>
 
 <dl>
 {% for article in dates %}
@@ -11,3 +11,5 @@
 </dl>
 </section>
 {% endblock %}
+
+{% block title %}Archives{% endblock %}

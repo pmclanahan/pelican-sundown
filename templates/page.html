@@ -2,7 +2,7 @@
 {% block title %}{{ page.title }}{% endblock %}
 {% block content %}
 <section id="content" class="body">
-    <div class="article-title">{{ page.title }}</div>
+    <div class="page-title">{{ page.title }}</div>
     {% import 'translations.html' as translations with context %}
     {{ translations.translations_for(page) }}
     {% if PDF_PROCESSOR %}<a href="{{ SITEURL }}/pdf/{{ page.slug }}.pdf">get

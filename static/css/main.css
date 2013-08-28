@@ -1,7 +1,7 @@
 @import url(https://fonts.googleapis.com/css?family=Lato:300italic,700italic,300,700);
 
 body {
-  padding:50px;
+  padding:20px 50px;
   font:16px/1.5 Lato, "Helvetica Neue", Helvetica, Arial, sans-serif;
   // color:#777;
   color: #333;
@@ -40,6 +40,10 @@ h2 {
 h3, h4, h5, h6 {
   color:#494949;
   font-weight: bold;
+}
+
+time {
+  border-bottom: 1px dotted #333;
 }
 
 a {
@@ -189,7 +193,7 @@ section {
 }
 
 small {
-  font-size:11px;
+  font-size:12px;
 }
 
 hr {
@@ -204,6 +208,10 @@ footer {
   float:left;
   position:fixed;
   bottom:10px;
+}
+
+footer p {
+    margin-bottom: 0;
 }
 
 @media print, screen and (max-width: 960px) {
@@ -300,8 +308,17 @@ footer {
   font-weight: 500;
   text-decoration: none;
   font-size: 28px;
-  margin-bottom: 0px;
-  padding-bottom: 0px;
+  margin-bottom: 0;
+  padding-bottom: 0;
+}
+
+.page-title {
+  color: #000;
+  font-weight: 500;
+  text-decoration: none;
+  font-size: 28px;
+  margin-bottom: 20px;
+  padding-bottom: 0;
 }
 
 .paginator {
@@ -309,6 +326,12 @@ footer {
   font-size: 14px;
 }
 
-.body dl {
-    margin-top: 20px;
+#cc-license-image {
+    border-width: 0;
+    position: relative;
+    top: 3px;
+}
+
+.list-footer {
+    float: left;
 }

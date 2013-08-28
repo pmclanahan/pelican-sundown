@@ -1,2 +1,9 @@
 {% extends "index.html" %}
-{% block title %}{{ SITENAME }} - {{ tag }}{% endblock %}
+
+{% block title %}#{{ tag }}{% endblock %}
+
+{% block content %}
+  <div class="page-title">Articles in #{{ tag }}</div>
+  {{ super() }}
+{% endblock %}
+
