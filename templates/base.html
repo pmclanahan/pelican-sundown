@@ -8,6 +8,12 @@
     <link rel="stylesheet" href="{{ SITEURL }}/theme/css/main.css">
     <link rel="stylesheet" href="{{ SITEURL }}/theme/css/pygment.css">
     <link rel="stylesheet" href="{{ SITEURL }}/theme/css/font-awesome.min.css">
+    {% if GITHUB_URL %}
+      <link rel="stylesheet" href="{{ SITEURL }}/theme/css/gh-fork-ribbon.css">
+      <!--[if IE]>
+        <link rel="stylesheet" href="{{ SITEURL }}/theme/css/gh-fork-ribbon.ie.css">
+      <![endif]-->
+    {% endif %}
     <link href="{{ SITEURL }}/{{ FEED_ATOM }}" type="application/atom+xml" rel="alternate" title="{{ SITENAME }} ATOM Feed">
     {% block extra_head %}{% endblock %}
     <!--[if lt IE 9]>
@@ -16,6 +22,13 @@
     {% include 'analytics.html' %}
   </head>
   <body>
+    {% if GITHUB_URL %}
+      <div class="github-fork-ribbon-wrapper right">
+        <div class="github-fork-ribbon">
+          <a href="{{ GITHUB_URL }}">Fork me on GitHub <i class="icon-github"></i></a>
+        </div>
+      </div>
+    {% endif %}
     <div class="wrapper">
       <header>
         <div class="title"><a href="{{ SITEURL }}/">{{ SITENAME }} </a></div>
